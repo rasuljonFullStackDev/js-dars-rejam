@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: sans-serif;
+    
+}
+.btn_all{
+    padding: 5px 10px;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin: 10px;
+}
+.btn_all.activ{
+    background: cornflowerblue;
+}

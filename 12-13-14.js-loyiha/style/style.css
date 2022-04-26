@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    max-width: 1440px;
+    display: block;
+    margin: auto;
+    background: #E5E5E5;
+    padding: 20px;
+}
+
+.load{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+.load.activ{
+    opacity: 0;
+    z-index: -999;
+}
+:root{
+    --grid:4
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(var(--grid), calc(100% / var(--grid)));
+    gap: 10px;
+    padding: 20px;
+}
+.card{
+    width: 100%;
+    background: #FFFFFF;
+    border: 0.5px solid rgba(42, 42, 42, 0.15);
+    box-sizing: border-box;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    text-align: center;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.count{
+    display: flex;
+    gap: 5px;
+}
+.count > .btn{
+    padding: 5px;
+    background: #2A2A2A;
+    color: white;
+}
+@media(max-width:991px) {
+    :root{
+        --grid:3
+    }
+}
+
+/* modal */
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -99;
+    transition: all 0.4s ease-in-out;
+}
+.modal_body{
+    width: 500px;
+    height: 500px;
+    background: white;
+    position: relative;
+    transform: translateY(-200px);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: red;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body .modal.activ,
+body .modal1.activ
+{
+    opacity: 1;
+    z-index: 99;
+}
+body .modal_body.activ,
+body .modal_body1.activ
+{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+.modal_data{
+    text-align: center;
+    padding: 20px;
+}
+.modal_data h1{
+    font-size: 45px;
+}
+.modal_data p{
+    font-size: 35px;
+}
+.modal_data p span{
+    color: red;
+    font-weight: 700;
+}
+.shop{
+    padding: 5px 25px;
+    background: crimson;
+    color: white;
+    font-size: 25px;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 3px;
+}
+.tableData{
+   display: flex;
+}
+.tableData p{
+    font-size: 14px;
+    border: 1px solid black;
+}
+.tableData img{
+    width: 50px;
+    height: 50px;
+}
+
+.btn_korzina{
+    padding: 5px 25px;
+    font-size: 20px;
+    color: white;
+    background: crimson;
+
+}
+
+.modal1{
+    /* opacity: 1;
+    z-index: 99; */
+}
+.modal_body1{
+    /* opacity: 1;
+    z-index: 99;
+    transform: translateY(0);
+    transition: all 0.4s ease-in-out;
+    opacity: 1; */
+    overflow-y: auto;
+    width: 700px;
+    padding: 20px;
+}
+.xarajat{
+    padding: 10px;
+
+}
+.xarajat > span{
+    color: crimson;
+}

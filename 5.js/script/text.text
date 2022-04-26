@@ -1,0 +1,36 @@
+let num  = 0;
+while(num<5){
+    console.log(num);
+    num++
+}
+
+do{
+    console.log(num)
+    num++
+}while(num<5)
+
+
+let a = [1,2,3,4];
+
+for(let key of a){
+    console.log(key);
+}
+
+//36-misol
+// let n = +prompt("n"),k = +prompt("k"),s = 0;
+// for(let i = 0; i<n;i++){
+//     s = s + i**k; 
+// }
+// alert(s)
+// n = 3, k = 2
+// 0 + 1 + 4 =5
+// 39-misol
+// let a = +prompt("a"),b = +prompt("b") , m = "";
+// for(let  i = a; i<b; i++){
+//     console.log("******");
+//     for(let k = 0; k<i; k++){
+//         m = m + `${i},`
+//     }
+//     console.log(m);
+//     m = ""
+// }

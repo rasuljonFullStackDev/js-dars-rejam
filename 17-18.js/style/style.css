@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    padding: 20px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+.flex > h1{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+}
+.table{
+    width: 100%;
+    text-align: center;
+}
+.table,tr,td{
+    border-collapse: collapse;
+}
+td{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding: 20px;
+}
+th{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ACACAC;
+}
+.btn{
+    padding: 13px 26px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #FEAF00;
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+    
+}
+
+body .input,
+body .inputs
+{
+    padding: 15px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* color: #CDCDCD; */
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.inputs{
+    border: 1px solid red !important;
+}
+.label{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6C6C6C;
+    margin-bottom: 10px;
+}
+.modal_body{
+    width: 475px;
+    background: #FFFFFF;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+.modal{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -99;
+    transition: all 0.4s ease-in-out;
+}
+.modal.activ{
+    opacity: 1;
+    z-index: 99;
+}
+.modal_body.activ{
+    opacity: 1;
+    transform: translate(0);
+    transition-delay: 0.3s;
+}
+.modal_name{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+form > button{
+    width: 100%;
+
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}

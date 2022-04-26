@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+   
+}
+body{
+    max-width: 1440px;
+    display: block;
+    margin: auto;
+}
+:root{
+    --grid:4;
+    --grid2:2;
+    --ahmad:5;
+    --color:red;
+    --color1:white;
+    --size:25px;
+    --hoshiya:1px solid green;
+    --famliy:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --display:none;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(var(--grid),calc(100% / var(--grid)));
+}
+.card{
+    background: var(--color);
+}
+.card h1{
+    color: var(--color1);
+    font-size: var(--size);
+    border: var(--hoshiya);
+    font-family: var(--famliy);
+}
+.card p{
+    display: var(--display);
+}
+
+@media(max-width:991px) {
+    :root{
+        --grid:3;
+    }
+}
+@media(max-width:776px) {
+    :root{
+        --grid:2;
+    }
+}
+@media(max-width:556px) {
+    :root{
+        --grid:1;
+    }
+}

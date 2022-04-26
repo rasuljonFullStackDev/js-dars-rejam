@@ -1,0 +1,29 @@
+
+inputs.addEventListener('keyup', (e) => {
+    if (e.target.value === "") {
+        localStorageData()
+    } else {
+        let datas = dataStorage.filter((val) => {
+            return val.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !==-1
+        })
+        if(datas.length===0){
+            tbody.innerHTML = "<tr><td colspan='4'>Malumot topilmadi</td></tr>"
+        }else{
+            tbody.innerHTML = ""
+            datas.forEach((val, i) => {
+                tbody.innerHTML += `
+                <tr>
+                    <td><img src="img/icon/profile.png" alt=""></td>
+                    <td>${val.name}</td>
+                    <td>${val.email}</td>
+                    <td>${val.phone}</td>
+                    <td>
+                    <button  onclick="editStorage(${i})"> <img src="img/icon/pen 1.svg" alt=""></button>
+                    <button onclick="deleteStorage(${i})"> <img src="img/icon/trash 1.svg" alt=""></button>
+                    </td>
+                </tr>
+            `
+            })
+        }
+    }
+})

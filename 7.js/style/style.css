@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 
+.cards{
+    padding: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,calc(100% / 3));
+    gap: 40px;
+}
+
+.card > h1{
+    font-size: 20px;
+
+} */
